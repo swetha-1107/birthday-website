@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?familyAdleryPro:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+ 
+
+<style>
+body {
+    margin: 0;
+    background-color: #f8c8dc !important; /* 💖 FORCE PINK */
+    font-family: 'Adlery Pro', cursive;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+/* hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 18px;
+    animation: floatUp 6s linear infinite;
+}
+@keyframes floatUp {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-100vh);}
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    padding: 14px 35px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #ff4d88, #ff80aa);
+    color:white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    /* Smooth animation */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(255, 77, 136, 0.4);
+}
+h1 {
+    font-family:'Great Vibes',cursive;
+    font-size:60px;
+    color:#c2185b;
+}
+
+p {
+    font-family:'Adlery Pro',cursive;
+    width:100%;
+    margin:auto;
+    font-size:100px;
+    line-height:1.7;
+}
+.love-lines {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.line {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+/* delay */
+.line:nth-child(1) { animation-delay: 0.5s; }
+.line:nth-child(2) { animation-delay: 1.5s; }
+.line:nth-child(3) { animation-delay: 2.5s; }
+.line:nth-child(4) { animation-delay: 3.5s; }
+.line:nth-child(5) { animation-delay: 4.5s; }
+.line:nth-child(6) { animation-delay: 5.5s; }
+
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>Things I Love About You 💖</h1>
+
+<div class="love-lines">
+
+<p class="line">Nee siricha 😊 azhaga irupa 💕 your dimple has my whole heart ❤️</p>
+<p class="line">I got lost in your eyes, un kannu avaloo azhaguu 😘🥰</p>
+<p class="line">Evaloo kovam vandhalum enna thittnadhu illa🥰</p>
+<p class="line">Na ketadhu lam vaangitharuva ❤️</p>
+<p class="line">Eppaiyum soft ah pesuva 💖</p>
+<p class="line">Enna nalla pathupa 🥰</p>
+
+</div>
+<button onclick="location.href='page4.html'">
+Our Story Continues 💞
+</button>
+
+</div>
+<script>
+setInterval(()=>{
+let h=document.createElement("div");
+h.innerHTML="💖";
+h.className="heart";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},500);
+</script>
+
+
+
+</body></html>

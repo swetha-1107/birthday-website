@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background:#F8C8DC;
+    text-align: center;
+    font-family: 'Imprint MT Shadow', sans-serif;
+    overflow-x: hidden;
+}
+
+/* hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 18px;
+    animation: floatUp 6s linear infinite;
+}
+@keyframes floatUp {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-100vh);}
+}
+
+/* button */
+/* 💖 SAME BUTTON FOR ALL PAGES */
+button {
+    display: block;
+    margin: 30px auto;
+    padding: 14px 35px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #ff4d88, #ff80aa);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    /* Smooth animation */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(255, 77, 136, 0.4);
+}
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    color: #c2185b;
+}
+
+p {
+    font-size: 30px;
+}
+
+img {
+    width: 300px;
+    border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Happy Birthday My Love ❤️</h1>
+<p>The man who makes every day a reason to smile, Thank you for coming into my life💕</p>
+
+<img src="photo1.jpg">
+
+<button onclick="location.href='page2.html'">Begin Our Story 💖</button>
+
+<script>
+setInterval(()=>{
+let h=document.createElement("div");
+h.innerHTML="❤️";
+h.className="heart";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},500);
+</script>
+
+</body>
+</html>
